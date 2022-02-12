@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="boxUser">
+		<p>LOGIN</p>
+		<input class="text" type="text" id="login" [(ngModel)]="newLogin">
+		<p>PASSWORD</p>
+		<input class="text" type="password" id="password" [(ngModel)]="newPassword">
+		<p>EMAIL</p>
+		<input class="text" type="text" id="email" [(ngModel)]="newEmail">
+		<p></p>
+		<button id="add" *ngIf="!editStatus" (click)="addUser()"> Add user</button>
+		<button id="edit" *ngIf="editStatus" (click)="editUser1()"> Edit user</button>
+	</div>
+	<div class="boxData">
+		<table>
+			<thead>
+				<tr>
+					<th class="nom">#</th>
+					<th class="log">LOGIN</th>
+					<th class="log">PASSWORD</th>
+					<th class="log">EMAIL</th>
+					<th class="but">EDIT</th>
+					<th class="but">DELETE</th>
+				</tr>
+			</thead>
+			<tbody id="table">
+				<tr *ngFor="let item of arrUsers;let i = index">
+					<th class="nom0">{{i+1}}</th>
+					<th class="login0">{{arrUsers[i].login}}</th>
+					<th class="pass0">{{arrUsers[i].password}}</th>
+					<th class="mail0">{{arrUsers[i].email}}</th>
+					<th><button class="edit" (click)="editUser(i)">EDIT</button></th>
+					<th><button class="delete" (click)="deleteUser(i)">DELETE</button></th>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</div>
+</div>
