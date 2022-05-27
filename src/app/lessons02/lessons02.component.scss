@@ -1,33 +1,33 @@
-:focus,
-:active {
-	outline: none;
-}
-.container {
-	display: flex;
-	justify-content: space-around;
-}
-.text {
-	width: 300px;
-	height: 30px;
-	border-radius: 10px;
-	border: 1px solid rgb(109, 102, 102);
-}
-.text:focus {
-	border: 1px solid rgb(23, 48, 160);
-	box-shadow: 0 0 20px #84888d;
-}
-#add,
-#edit {
-	height: 30px;
-	width: 100px;
-	border-radius: 10px;
-}
-.nom {
-	width: 20px;
-}
-.log {
-	width: 180px;
-}
-.but {
-	width: 110px;
-}
+// :focus,
+// :active {
+// 	outline: none;
+// }
+// .container {
+// 	display: flex;
+// 	justify-content: space-around;
+// }
+// .text {
+// 	width: 300px;
+// 	height: 30px;
+// 	border-radius: 10px;
+// 	border: 1px solid rgb(109, 102, 102);
+// }
+// .text:focus {
+// 	border: 1px solid rgb(23, 48, 160);
+// 	box-shadow: 0 0 20px #84888d;
+// }
+// #add,
+// #edit {
+// 	height: 30px;
+// 	width: 100px;
+// 	border-radius: 10px;
+// }
+// .nom {
+// 	width: 20px;
+// }
+// .log {
+// 	width: 180px;
+// }
+// .but {
+// 	width: 110px;
+// }
