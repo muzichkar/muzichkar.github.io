@@ -1,0 +1,5 @@
+<h1>Count of task: {{count}}</h1>
+<input type="text" [(ngModel)]="myName">
+<app-child [userName]="myName" (fromChild)="getCount($event)"></app-child>
+
+<!-- <app-child (fromChild)="getCount($event)"></app-child> -->
