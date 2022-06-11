@@ -7,17 +7,21 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 	styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-	@Input() userName!: string;
+	@Input() userName = [{ nameUse: '', boolean: false }];
 	@Output() fromChild = new EventEmitter<number>()
-
 
 	constructor() { }
 
 	ngOnInit(): void {
-
-	}
-	countNum(): void {
-		this.fromChild.emit(2)
 	}
 
+	editTasck(index: number): void {
+		this.fromChild.emit(index);
+	}
+	deleteTasck(index: number): void {
+		this.userName.splice(index, 1);
+	}
+	checkboxClick(index: number): void {
+		this.userName[index].boolean = !this.userName[index].boolean;
+	}
 }

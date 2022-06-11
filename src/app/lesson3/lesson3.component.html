@@ -1,5 +1,10 @@
-<h1>Count of task: {{count}}</h1>
-<input type="text" [(ngModel)]="myName">
-<app-child [userName]="myName" (fromChild)="getCount($event)"></app-child>
-
-<!-- <app-child (fromChild)="getCount($event)"></app-child> -->
+<div class="main">
+	<h1>Count of task: {{arrTasks.length}}</h1>
+	<input type="text" [(ngModel)]="myName" class="text">
+	<input type="button" (click)="textObj()" value="ADD" [disabled]="!myName" class="buttom">
+	<app-child [userName]="arrTasks" (fromChild)="getArr($event)"></app-child>
+	<div [ngClass]="{'block':!editName}">
+		<input type="text" [(ngModel)]="editName" class="text">
+		<input type="button" value="SAVE" (click)="saveTasck()" class="buttom">
+	</div>
+</div>
