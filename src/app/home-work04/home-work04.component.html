@@ -1,0 +1,75 @@
+<div class="container">
+	<input type="text" class="text1" placeholder="Search.." [(ngModel)]="searchUser">
+	<input type="button" class="but-add" value="add" (click)="addUser()">
+	<table>
+		<tr>
+			<th>
+				<div class="cont">
+					<p>First name</p>
+					<div class="sort-button">
+						<button class="sort-button1" (click)="sort('fn-up')">▲</button>
+						<button class="sort-button1" (click)="sort('fn-down')">▼</button>
+					</div>
+				</div>
+
+			</th>
+			<th>
+				<div class="cont">
+					<p>Last name</p>
+					<div class="sort-button">
+						<button class="sort-button1" (click)="sort('ln-up')">▲</button>
+						<button class="sort-button1" (click)="sort('ln-down')">▼</button>
+					</div>
+				</div>
+
+			</th>
+			<th>
+				<div class="cont">
+					<p>Number</p>
+					<div class="sort-button">
+						<button class="sort-button1" (click)="sort('num-up')">▲</button>
+						<button class="sort-button1" (click)="sort('num-down')">▼</button>
+					</div>
+				</div>
+
+			</th>
+			<th>edit</th>
+			<th>delete</th>
+		</tr>
+		<tr class="tr" *ngFor="let name of arrUsers | search: searchUser |sort: type ; index as i ">
+			<td>{{name.firstName | titlecase}} </td>
+			<td>{{name.lastName | titlecase}}</td>
+			<td>{{name.number }}</td>
+			<td><input class="but-edit" type="button" value="edit" (click)="editUser(i)"></td>
+			<td><input class="but-delete" type="button" value="delete" (click)="deleteUser(i)"></td>
+		</tr>
+	</table>
+	<ng-container *ngIf="addUsers">
+		<div class="modal">
+			<div class="modal-content">
+				<div class="block-add">
+					<span id="close" class="close" (click)="offModal()">&times;</span>
+					<input type="text" class="text" [(ngModel)]="firstNameAdd" placeholder="First name">
+					<input type="text" class="text" [(ngModel)]="lastNameAdd" placeholder="Last name">
+					<input type="text" class="text" [(ngModel)]="numberNameAdd" placeholder="380">
+					<input type="button" class="button" value="save" (click)="addArrayUsers()"
+						[disabled]="!firstNameAdd||!lastNameAdd||!numberNameAdd">
+				</div>
+			</div>
+		</div>
+	</ng-container>
+	<ng-container *ngIf="editUsers">
+		<div class="modal">
+			<div class="modal-content">
+				<div class="block-add">
+					<span id="close" class="close" (click)="offModal()">&times;</span>
+					<input type="text" class="text" [(ngModel)]="editFirstNameAdd">
+					<input type="text" class="text" [(ngModel)]="editLastNameAdd">
+					<input type="text" class="text" [(ngModel)]="editNumberNameAdd">
+					<input type="button" value="save" class="button" (click)="editArrayUsers()"
+						[disabled]="!editFirstNameAdd||!editLastNameAdd||!editNumberNameAdd">
+				</div>
+			</div>
+		</div>
+	</ng-container>
+</div>
