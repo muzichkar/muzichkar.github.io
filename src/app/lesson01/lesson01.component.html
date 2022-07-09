@@ -1,0 +1,15 @@
+<div>
+	<div>
+		<span>Bad Words:{{badWords}}</span>
+	</div>
+	<div>
+		<input type="text" [(ngModel)]="wordsHere" [class.brRed]="brRed" placeholder={{place1}}>
+		<button (click)="add()">Add</button>
+		<button (click)="reset()">Reset</button>
+	</div>
+</div>
+<div></div>
+<textarea name="" [(ngModel)]="tetxCenzor" cols="100" rows="5" [class.brRed1]="brRed1"
+	placeholder={{place2}}></textarea>
+<br>
+<button (click)="cenzor()">cenzor</button>

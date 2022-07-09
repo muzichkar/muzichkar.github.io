@@ -1,0 +1,33 @@
+:focus,
+:active {
+	outline: none;
+}
+.main{
+	height:1800px;
+	width: 100%;
+	margin: auto;
+
+	text-align: center;
+}
+.buttom{
+	height: 40px;
+	width: 100px;
+	color: white;
+	background-color: rgb(122, 238, 172);
+	border-radius: 10px;
+	
+}
+.text{
+	height: 30px;
+	width: 700px;
+	border-radius: 10px;
+	border: 0px solid rgb(65, 66, 71);
+	box-shadow: 0 0 20px #84888d;
+}
+.text:focus {
+	border: 1px solid rgb(145, 146, 147);
+	box-shadow: 0 0 20px #45484c;
+}
+.block{
+	display: none;
+}

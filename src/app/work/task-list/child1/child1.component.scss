@@ -1,0 +1,40 @@
+
+table {
+	text-align: center;
+	margin: 138px auto;
+	font-weight: bold;
+	line-height: 33px;
+	border-spacing: 0;
+}
+th{
+	width: 200px;
+	height: 100px;
+}
+td{
+	text-align: center;
+	width: 200px;
+	height: 50px;
+	border: -1px solid;
+	font-size: 20px;
+}
+.tr:hover {
+	background-color: rgb(251, 249, 249);
+ }
+ .buttom{
+	height: 30px;
+	width: 100px;
+	color: white;
+	border-radius: 10px;
+	background-color: rgb(42, 179, 37);
+}
+.buttom1{
+	height: 30px;
+	width: 100px;
+	color: white;
+	border-radius: 10px;
+	background-color: red;
+}
+.checkbox{
+	height: 20px;
+	width: 20px;
+}

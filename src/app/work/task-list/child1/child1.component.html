@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>TASK</th>
+			<th>CHECK</th>
+			<th>DONE\IN PROGRESS</th>
+			<th>EDIT</th>
+			<th>DELETE</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="tr" *ngFor="let name of userName;index as i ">
+			<td>{{i+1}}</td>
+			<td>{{name.nameUse}}</td>
+			<td><input type='checkbox' (click)="checkboxClick(i)" class="checkbox"></td>
+			<td [ngStyle]="{'color':!name.boolean?'red':'green'}">{{!name.boolean?'IN PROGRESS':'DONE'}}</td>
+			<td><button (click)="editTasck(i)" [disabled]="!name.boolean" class="buttom">EDIT</button></td>
+			<td><button (click)="deleteTasck(i)" [disabled]="!name.boolean" class="buttom1">DELETE</button></td>
+		</tr>
+	</tbody>
+</table>
